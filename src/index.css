@@ -1,34 +1,17 @@
-/* Todo.css */
-
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-}
-
-.center-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
+/* Styling for the container */
 .container {
-  max-width: 600px;
-  margin: 0 auto;
+  margin: 20px auto;
+  max-width: 400px;
   padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
+/* Styling for the input fields and buttons */
 input[type="text"],
 textarea {
-  display: block;
-  width: 60%;
+  width: 100%;
   margin-bottom: 10px;
   padding: 8px;
   font-size: 16px;
@@ -37,51 +20,79 @@ textarea {
 }
 
 button {
-  padding: 10px 20px;
+  padding: 8px 12px;
   font-size: 16px;
-  background-color: #4caf50;
   color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  margin-right: 10px;
+  transition: background-color 0.2s ease; 
 }
 
-ul.taskList {
-  list-style: none;
-  padding: 0;
+.addTask {
+  background-color: #4caf50;
 }
 
-li.task {
-  background-color: #fff;
-  padding: 10px;
-  margin-bottom: 10px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
+.editBtn {
+  background-color: #2196f3;
+  margin-right: 8px;
 }
 
-li.task strong {
-  font-size: 18px;
-  margin-right: 10px;
-}
-
-li.task button {
+.deleteBtn {
   background-color: #f44336;
 }
 
-/* Todo.css */
-
-/* ... (your existing styles) */
-
-button {
-  /* ... (your existing styles) */
-  transition: background-color 0.3s ease; /* Add a smooth transition effect */
-}
-
 button:hover {
-  background-color: #1abc9c; /* Change the background color on hover */
+  /* Change the background color when hovered */
+  background-color: #555;
+  /* Optionally, you can also change the text color */
+  color: #fff;
 }
 
-li.task button:hover {
-  background-color: #e67e22; /* Change the background color of task buttons on hover */
+.addTask:hover {
+  /* Change the background color when hovered */
+  background-color: #1abc9c;
+}
+
+/* Hover effect for Edit and Delete buttons */
+.editBtn:hover
+ {
+  /* Change the background color when hovered */
+  background-color: #1976d2;
+}
+
+.deleteBtn:hover{
+  background-color: #c0392b;
+}
+
+/* Styling for the task list */
+.taskList {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.tasks {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tasks strong {
+  font-weight: bold;
+}
+
+/* Styling for the page header */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 600px) {
+  .container {
+    max-width: 90%;
+  }
 }

@@ -73,16 +73,16 @@ const Todo = () => {
     return ( 
         <>
             <h1>Todo App</h1>
-            <div className="center-container">
+            <div className="container">
                 <input type="text" name="task" id="task" value={task.name} onChange={getInputHandler} placeholder="Enter task name"/>
                 <textarea name="taskDes" id="taskDes" cols="30" rows="10" value={task.description} onChange={getDescriptionHandler} placeholder="Enter task description"></textarea>
-                <button onClick={addTask}>{task.id ? "Edit Task" : "Add Task"}</button>
+                    <button className="addTask" onClick={addTask}>{task.id ? "Edit Task" : "Add Task"}</button>
             </div>
             <ul className="taskList">
                 {taskList.map((task, index) => (
-                    <li key={task.id} className="task">{index+1}{")"} Task Name: <strong>{task.name}</strong> Task Description: {task.description}
-                    <button onClick={() => editTaskHandler(task.id)}>Edit</button>
-                    <button onClick={() => deleteTaskHandler(task.id)}>Delete</button>
+                    <li key={task.id} className="tasks">{index+1}{")"} Task Name: <strong>{task.name}</strong> Task Description: {task.description}
+                    <button className="editBtn" onClick={() => editTaskHandler(task.id)}>Edit</button>
+                    <button className="deleteBtn" onClick={() => deleteTaskHandler(task.id)}>Delete</button>
                     </li>
                 ))}
             </ul>
